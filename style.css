@@ -1,0 +1,106 @@
+/* style.css */
+
+/* Space Background with Moving Stars */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* allow scrolling vertically */
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Push form a bit downward */
+    color: #66fcf1;
+    position: relative;
+}
+
+/* Stars Animation */
+body::before {
+    content: "";
+    position: fixed; /* fixed background, won't move with scroll */
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://raw.githubusercontent.com/Klerith/assets-html-css-js/main/stars.png') repeat top center;
+    animation: moveStars 200s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes moveStars {
+    from {transform: translateY(0);}
+    to {transform: translateY(-1000px);}
+}
+
+/* Form Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #66fcf1;
+    text-shadow: 0 0 5px #66fcf1, 0 0 10px #45a29e;
+    z-index: 2;
+}
+
+/* Form Styles */
+form {
+    background: rgba(31, 40, 51, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.7);
+    width: 320px;
+    z-index: 2;
+}
+
+/* Inputs and Textareas */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c5c6c7;
+    color: #0b0c10;
+    font-size: 14px;
+}
+
+/* Launch Button */
+button {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 2;
+}
+
+button:hover {
+    background-color: #45a29e;
+    box-shadow: 0 0 15px #66fcf1, 0 0 25px #66fcf1;
+}
+
+/* Floating Rocket */
+.rocket {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 10%;
+    animation: floatRocket 10s infinite linear;
+    z-index: 1;
+}
+
+@keyframes floatRocket {
+    0% { transform: translateY(0) rotate(0deg);}
+    50% { transform: translateY(-20px) rotate(2deg);}
+    100% { transform: translateY(0) rotate(-2deg);}
+}

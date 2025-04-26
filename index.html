@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Hall Booking Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- We'll add simple CSS later -->
+</head>
+<body>
+
+    <h2>Lecture Hall Booking Form</h2>
+<img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="rocket">
+
+    <form id="bookingForm">
+
+        <!-- Booking Person -->
+        <label>Booking Person:</label><br>
+        <select id="bookingPerson" required>
+            <option value="">--Select--</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+        </select><br><br>
+
+        <!-- Name -->
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <!-- Department -->
+        <label>Department:</label><br>
+        <input type="text" id="department" required><br><br>
+
+        <!-- Event Name -->
+        <label>Event Name:</label><br>
+        <select id="eventName" required>
+            <option value="">--Select Event--</option>
+            <option value="Regular Lecture">Regular Lecture</option>
+            <option value="Extra Lecture">Extra Lecture</option>
+            <option value="Tutorial">Tutorial</option>
+            <option value="Answer Sheets Showing">Answer Sheets Showing</option>
+            <option value="Others">Others</option>
+        </select><br><br>
+
+        <!-- Venue -->
+        <label>Venue (Lecture Hall No.):</label><br>
+        <input type="text" id="venue" required><br><br>
+
+        <!-- Date -->
+        <label>Date:</label><br>
+        <input type="date" id="date" required><br><br>
+
+        <!-- Time -->
+        <label>Time:</label><br>
+        <input type="text" id="time" placeholder="e.g., 10:00 AM - 12:00 PM" required><br><br>
+
+        <!-- Comments -->
+        <label>Comments:</label><br>
+        <textarea id="comments" rows="4" placeholder="Any additional info..."></textarea><br><br>
+
+        <!-- Launch Button -->
+        <button type="submit">Launch Booking Request</button>
+    </form>
+
+    <!-- Firebase Libraries -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <!-- Our JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
