@@ -1,0 +1,203 @@
+{
+  "faculties": {
+    "faculty001": {
+      "name": "Dr. Rahul Pachuri",
+      "department": "Computer Science",
+      "password": "faculty123",
+      "email": "rahul@example.com",
+      "phone": "9876543210",
+      "type": "faculty"
+    },
+    "faculty002": {
+      "name": "Dr. Neha Gupta",
+      "department": "Mechanical",
+      "password": "faculty123",
+      "email": "neha@example.com",
+      "phone": "9876543211",
+      "type": "faculty"
+    },
+    "faculty003": {
+      "name": "Dr. Sunil Sharma",
+      "department": "Electrical",
+      "password": "faculty123",
+      "email": "sunil@example.com",
+      "phone": "9876543212",
+      "type": "faculty"
+    },
+    "faculty004": {
+      "name": "Dr. Priya Mehta",
+      "department": "Computer Science",
+      "password": "faculty123",
+      "email": "priya@example.com",
+      "phone": "9876543213",
+      "type": "faculty"
+    },
+    "faculty005": {
+      "name": "Dr. Amit Kulkarni",
+      "department": "Computer Science",
+      "password": "faculty123",
+      "email": "amit@example.com",
+      "phone": "9876543214",
+      "type": "faculty"
+    },
+    "faculty006": {
+      "name": "Dr. Sneha Rao",
+      "department": "Electronics",
+      "password": "faculty123",
+      "email": "sneha@example.com",
+      "phone": "9876543215",
+      "type": "faculty"
+    },
+    "faculty007": {
+      "name": "Dr. Manish Patel",
+      "department": "IT",
+      "password": "faculty123",
+      "email": "manish@example.com",
+      "phone": "9876543216",
+      "type": "faculty"
+    },
+    "faculty008": {
+      "name": "Dr. Kavita Das",
+      "department": "Architecture",
+      "password": "faculty123",
+      "email": "kavita@example.com",
+      "phone": "9876543217",
+      "type": "faculty"
+    },
+    "faculty009": {
+      "name": "Dr. Deepak Sharma",
+      "department": "Aerospace",
+      "password": "faculty123",
+      "email": "deepak@example.com",
+      "phone": "9876543218",
+      "type": "faculty"
+    },
+    "faculty010": {
+      "name": "Dr. Navaljeet Singh",
+      "department": "Computer Science",
+      "password": "faculty123",
+      "email": "navaljeet@example.com",
+      "phone": "9876543219",
+      "type": "faculty"
+    }
+  },
+  "students": {
+    "student001": {
+      "name": "Anita Sharma",
+      "department": "Computer Science",
+      "password": "student123",
+      "email": "anita@example.com",
+      "rollNumber": "CS21B001",
+      "phone": "8765432101",
+      "type": "student"
+    },
+    "student002": {
+      "name": "Rohit Jha",
+      "department": "Mechanical",
+      "password": "student123",
+      "email": "rohit@example.com",
+      "rollNumber": "ME21B002",
+      "phone": "8765432102",
+      "type": "student"
+    },
+    "student003": {
+      "name": "Sneha Iyer",
+      "department": "Electrical",
+      "password": "student123",
+      "email": "sneha@example.com",
+      "rollNumber": "EE21B003",
+      "phone": "8765432103",
+      "type": "student"
+    },
+    "student004": {
+      "name": "Amit Sinha",
+      "department": "Civil",
+      "password": "student123",
+      "email": "amit@example.com",
+      "rollNumber": "CE21B004",
+      "phone": "8765432104",
+      "type": "student"
+    },
+    "student005": {
+      "name": "Priya Raj",
+      "department": "Chemical",
+      "password": "student123",
+      "email": "priya@example.com",
+      "rollNumber": "CH21B005",
+      "phone": "8765432105",
+      "type": "student"
+    },
+    "student006": {
+      "name": "Ravi Chauhan",
+      "department": "Electronics",
+      "password": "student123",
+      "email": "ravi@example.com",
+      "rollNumber": "EC21B006",
+      "phone": "8765432106",
+      "type": "student"
+    },
+    "student007": {
+      "name": "Kiran Yadav",
+      "department": "IT",
+      "password": "student123",
+      "email": "kiran@example.com",
+      "rollNumber": "IT21B007",
+      "phone": "8765432107",
+      "type": "student"
+    },
+    "student008": {
+      "name": "Divya Bansal",
+      "department": "Architecture",
+      "password": "student123",
+      "email": "divya@example.com",
+      "rollNumber": "AR21B008",
+      "phone": "8765432108",
+      "type": "student"
+    },
+    "student009": {
+      "name": "Sachin Kumar",
+      "department": "Aerospace",
+      "password": "student123",
+      "email": "sachin@example.com",
+      "rollNumber": "AE21B009",
+      "phone": "8765432109",
+      "type": "student"
+    },
+    "student010": {
+      "name": "Pooja Reddy",
+      "department": "Biotech",
+      "password": "student123",
+      "email": "pooja@example.com",
+      "rollNumber": "BT21B010",
+      "phone": "8765432110",
+      "type": "student"
+    }
+  },
+  "venues": {
+    "venue001": {"name": "Lecture Hall A1", "available": true, "filled": false, "capacity": 120, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue002": {"name": "Lecture Hall A2", "available": true, "filled": false, "capacity": 110, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue003": {"name": "Lecture Hall A3", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue004": {"name": "Lecture Hall A4", "available": true, "filled": false, "capacity": 90, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue005": {"name": "Lecture Hall A5", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue006": {"name": "Lecture Hall B1", "available": true, "filled": false, "capacity": 130, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue007": {"name": "Lecture Hall B2", "available": true, "filled": false, "capacity": 110, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue008": {"name": "Lecture Hall B3", "available": true, "filled": false, "capacity": 105, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue009": {"name": "Lecture Hall B4", "available": true, "filled": false, "capacity": 95, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue010": {"name": "Lecture Hall B5", "available": true, "filled": false, "capacity": 115, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue011": {"name": "Lecture Hall C1", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue012": {"name": "Lecture Hall C2", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue013": {"name": "Lecture Hall C3", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue014": {"name": "Lecture Hall C4", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue015": {"name": "Lecture Hall C5", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue016": {"name": "Lecture Hall D1", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue017": {"name": "Lecture Hall D2", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue018": {"name": "Lecture Hall D3", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue019": {"name": "Lecture Hall D4", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue020": {"name": "Lecture Hall D5", "available": true, "filled": false, "capacity": 100, "availableFrom": "09:00", "availableTo": "17:00"},
+    "venue021": {"name": "Auditorium", "available": true, "filled": false, "capacity": 500, "availableFrom": "09:00", "availableTo": "20:00"},
+    "venue022": {"name": "Conference Room", "available": true, "filled": false, "capacity": 50, "availableFrom": "09:00", "availableTo": "18:00"},
+    "venue023": {"name": "Tagore Hall 1", "available": true, "filled": false, "capacity": 150, "availableFrom": "09:00", "availableTo": "18:00"},
+    "venue024": {"name": "Seminar Hall 2", "available": true, "filled": false, "capacity": 150, "availableFrom": "09:00", "availableTo": "18:00"},
+    "venue025": {"name": "Library Conference Room", "available": true, "filled": false, "capacity": 60, "availableFrom": "09:00", "availableTo": "18:00"}
+  }
+}
