@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        
+        <label for="userType">Select User Type:</label>
+        <select id="userType" onchange="handleUserTypeChange()">
+            <option value="">--Select--</option>
+            <option value="admin">Admin</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+        </select>
+
+        <div id="adminSelection" style="display: none;">
+            <label for="adminID">Select Admin ID:</label>
+            <select id="adminID">
+                <option value="">--Select Admin--</option>
+                <option value="admin001">Admin 001</option>
+                <option value="admin002">Admin 002</option>
+            </select>
+        </div>
+
+        <div id="usernameDiv" style="display: none;">
+            <label for="username">Enter Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
