@@ -1,10 +1,10 @@
-// Firebase Configuration
+// 1. Firebase Configuration
 const firebaseConfig = {
   apiKey: 'AIzaSyDnkqWIlJbeVUGRxbDk_BkgqeCCIvP7FXI',
   authDomain: 'college-permission-system.firebaseapp.com',
   databaseURL: 'https://college-permission-system-default-rtdb.firebaseio.com',
   projectId: 'college-permission-system',
-  storageBucket: 'college-permission-system.firebasestorage.app',
+  storageBucket: 'college-permission-system.appspot.com',
   messagingSenderId: '734452865661',
   appId: '1:734452865661:web:e00398c43621a677bf6f14',
 };
@@ -13,64 +13,55 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-// Reference to the bookings node in the Firebase Realtime Database
-const bookingsRef = database.ref("bookings");
+// 2. Fetch Bookings from Firebase and display
+const bookingsTable = document.getElementById('bookingsTableBody');
 
-// Fetch bookings data and display in the table
-bookingsRef.on("value", function(snapshot) {
-  const bookings = snapshot.val();
-  const tableBody = document.getElementById("bookingTable").getElementsByTagName('tbody')[0];
+database.ref('requests').on('value', function(snapshot) {
+  bookingsTable.innerHTML = ''; // Clear table before adding new
 
-  // Clear the existing table rows
-  tableBody.innerHTML = "";
+  snapshot.forEach(function(childSnapshot) {
+    const booking = childSnapshot.val();
+    const bookingKey = childSnapshot.key;
 
-  // Loop through the bookings and populate the table
-  for (const key in bookings) {
-    const booking = bookings[key];
-    const row = document.createElement("tr");
+    const row = document.createElement('tr');
 
     row.innerHTML = `
       <td>${booking.bookingPerson}</td>
       <td>${booking.name}</td>
+      <td>${booking.department}</td>
       <td>${booking.event}</td>
-      <td>${booking.venueId}</td>
+      <td>${booking.venue}</td>
       <td>${booking.date}</td>
       <td>${booking.time}</td>
       <td>${booking.status}</td>
       <td>
-        <button class="approve" onclick="updateBookingStatus('${key}', 'Approved')">Approve</button>
-        <button class="reject" onclick="updateBookingStatus('${key}', 'Rejected')">Reject</button>
+        <button onclick="approveBooking('${bookingKey}', '${booking.venue}')">Approve</button>
+        <button onclick="rejectBooking('${bookingKey}', '${booking.venue}')">Reject</button>
       </td>
     `;
 
-    tableBody.appendChild(row);
-  }
+    bookingsTable.appendChild(row);
+  });
 });
 
-// Function to update the status of a booking
-function updateBookingStatus(bookingId, status) {
-  const bookingRef = database.ref("bookings/" + bookingId);
-  bookingRef.update({
-    status: status
+// 3. Approve Booking
+function approveBooking(bookingKey, venueId) {
+  database.ref('requests/' + bookingKey).update({
+    status: 'Approved'
+  });
+  alert('Booking Approved!');
+}
+
+// 4. Reject Booking
+function rejectBooking(bookingKey, venueId) {
+  database.ref('requests/' + bookingKey).update({
+    status: 'Rejected'
   });
 
-  // Update the venue status accordingly if the booking is approved or rejected
-  const bookingData = bookingRef.once("value").then(function(snapshot) {
-    const venueId = snapshot.val().venueId;
-    const venueRef = database.ref("venues/" + venueId);
-
-    if (status === "Approved") {
-      // Mark the venue as filled (booked)
-      venueRef.update({
-        filled: true
-      });
-    } else {
-      // Mark the venue as available (unfilled) if rejected
-      venueRef.update({
-        filled: false
-      });
-    }
+  // Also make venue available again
+  database.ref('venues/' + venueId).update({
+    filled: false
   });
 
-  alert(`Booking has been ${status}!`);
+  alert('Booking Rejected and Venue Released!');
 }
